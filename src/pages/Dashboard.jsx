@@ -14,6 +14,9 @@ const Dashboard = () => {
   const [completedTasks, setCompletedTasks] = useState(
     updatedTasks.filter((task) => task.status === "completed").length
   );
+  const inProgressTasks = updatedTasks.filter(
+    (task) => task.status === "in progress"
+  );
   const notStartedTasks = updatedTasks.filter(
     (task) => task.status === "not started"
   );
@@ -76,6 +79,12 @@ const Dashboard = () => {
                 <h4>Not Started</h4>
               </div>
               <div className="summary-item-body">{notStartedTasks.length}</div>
+            </div>
+            <div className="summary-item">
+              <div className="summary-item-header">
+                <h4>In Progress</h4>
+              </div>
+              <div className="summary-item-body">{inProgressTasks.length}</div>
             </div>
           </div>
         </div>
