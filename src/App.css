@@ -5,15 +5,14 @@
 }
 main{
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 250px;
-  min-width: 250px;
-  max-width: 250px;
+  flex-wrap: wrap;
+  min-width: 20vw;
   background-color: #1bc1cd;
   border-right: 1px solid #E1E3E6;
 }
@@ -69,8 +68,7 @@ main{
 
 
 .dashboard {
-  margin: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid #727272;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -78,11 +76,13 @@ main{
 
 .summary {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
-  margin-top: 2rem;
 }
 .task-summary,
 .project-summary {
+  display: flex;
+  flex-direction: column;
   flex-basis: 50%;
 }
 .summary-item {
@@ -90,6 +90,7 @@ main{
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -91,9 +91,10 @@ const Dashboard = () => {
       </div>
       <div className="task-list">
         <h3>All Tasks</h3>
-        <div className="task-list-body">
+        <></>
+        <div className="task-list-body" style={{ display: 'flex', flexDirection:"row", justifyContent:'space-between', flexWrap:'wrap' }}>
           {updatedTasks.map((task) => (
-            <div key={task.id} className="task">
+            <div key={task.id} className="task" style={{display:'flex', flexDirection:'column'}}>
               <div className="task-header">
                 <h4>{task.name}</h4>
                 <select

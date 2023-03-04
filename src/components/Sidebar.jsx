@@ -44,14 +44,19 @@ const Sidebar = ({ children }) => {
             <FaBars />
           </div>
         </div>
+        <div style={{display:'flex', flexDirection:'column', flexWrap:'wrap'}}>
+
         {
           menuItems.map((item, index) => (
             <NavLink to={item.path} key={index} className="link" activeClassName="active">
+              <div style={{display:'flex', flexDirection:'row'}}>
               <div className="icon">{item.icon}</div>
               <div className="link-text">{item.name}</div>
+              </div>
             </NavLink>
           ))
         }
+        </div>
       </div>
       <main>{children}</main>
     </div>
